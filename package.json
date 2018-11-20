@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "prewatch": "npm run build",
-    "watch": "npm-run-all -p watch:*",
+    "watch": "npm-run-all prewatch -p watch:*",
     "watch:html": "onchange \"src/**/*.html\" -- npm run copy:html",
     "watch:images": "onchange \"src/images/**/*\" -- npm run copy:images",
     "watch:scripts": "onchange \"src/scripts/**/*\" -- npm run copy:scripts",
@@ -19,7 +19,7 @@
     "copy:webfonts": "cpy \"**/*\" \"../../dist/webfonts\" --cwd=src/webfonts --parents",
     "copy:images": "cpy \"**/*\" \"../../dist/images\" --cwd=src/images --parents",
     "prebuild": "npm run clean",
-    "build": "npm-run-all -p copy build:*",
+    "build": "npm-run-all prebuild -p copy build:*",
     "build:sass": "node-sass src/sass/style.scss --output-style compressed -o dist/css"
   },
   "author": "",
