@@ -46,7 +46,7 @@
     .stars {
       a {
         text-decoration: none;
-        color: rgb(42,42,42);
+        color: rgb(42, 42, 42);
         @extend .far;
         @extend .fa-star;
 
@@ -63,7 +63,7 @@
     position: relative;
 
     &::before {
-      content: '';
+      content: "";
       position: absolute;
       bottom: -1px;
       left: 50%;

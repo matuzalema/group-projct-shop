@@ -5,13 +5,13 @@
   "main": "index.js",
   "scripts": {
     "prewatch": "npm run build",
-    "watch": "npm-run-all prewatch -p watch:*",
+    "watch": "npm-run-all -p watch:*",
     "watch:html": "onchange \"src/**/*.html\" -- npm run copy:html",
     "watch:images": "onchange \"src/images/**/*\" -- npm run copy:images",
     "watch:scripts": "onchange \"src/scripts/**/*\" -- npm run copy:scripts",
     "watch:webfonts": "onchange \"src/webfonts/**/*\" -- npm run copy:webfonts",
     "watch:sass": "node-sass src/sass/style.scss --source-map true -w -o dist/css",
-    "watch:browsersync": "browser-sync start --server --files ./ --cwd dist",
+    "watch:browsersync": "browser-sync dist -w",
     "clean": "rimraf dist",
     "copy": "npm-run-all -p copy:*",
     "copy:html": "cpy \"**/*.html\" \"../dist\" --cwd=src --parents",
@@ -19,18 +19,41 @@
     "copy:webfonts": "cpy \"**/*\" \"../../dist/webfonts\" --cwd=src/webfonts --parents",
     "copy:images": "cpy \"**/*\" \"../../dist/images\" --cwd=src/images --parents",
     "prebuild": "npm run clean",
-    "build": "npm-run-all prebuild -p copy build:*",
-    "build:sass": "node-sass src/sass/style.scss --output-style compressed -o dist/css"
+    "build": "npm-run-all -p copy build:*",
+    "build:sass": "node-sass src/sass/style.scss --output-style compressed -o dist/css",
+    "code-quality": "npm-run-all format lint",
+    "format": "prettier --write \"src/**/*.{js,html,scss}\"",
+    "lint": "eslint src/"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged && lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint"
+    ]
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "browser-sync": "^2.24.7",
-    "browsersync": "0.0.1-security",
+    "browser-sync": "^2.26.3",
     "cpy-cli": "^2.0.0",
-    "node-sass": "^4.9.3",
-    "npm-run-all": "^4.1.3",
-    "onchange": "^4.1.0",
-    "rimraf": "^2.6.2"
-  }
+    "eslint": "^5.12.0",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-node": "^8.0.1",
+    "eslint-plugin-promise": "^4.0.1",
+    "eslint-plugin-standard": "^4.0.0",
+    "husky": "^1.3.1",
+    "lint-staged": "^8.1.0",
+    "node-sass": "^4.11.0",
+    "npm-run-all": "^4.1.5",
+    "onchange": "^5.2.0",
+    "prettier": "^1.15.3",
+    "pretty-quick": "^1.8.0",
+    "rimraf": "^2.6.3"
+  },
+  "dependencies": {}
 }

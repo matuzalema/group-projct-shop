@@ -1,6 +1,6 @@
 .panel-bar {
   margin-bottom: 30px;
-  
+
   .row > * {
     border-bottom: 4px solid #e2e2e2;
   }
@@ -14,11 +14,11 @@
       font-size: 20px;
       line-height: 38px;
       margin: 0;
-      letter-spacing: 1px
+      letter-spacing: 1px;
     }
 
     &::before {
-      content: '';
+      content: "";
       position: absolute;
       bottom: -4px;
       left: 0;
@@ -39,7 +39,7 @@
         font-weight: 600;
 
         a {
-          color: rgb(42,42,42);
+          color: rgb(42, 42, 42);
           position: relative;
           text-decoration: none;
           font-size: 18px;
@@ -48,7 +48,7 @@
           &.active,
           &:hover {
             &::before {
-              content: '';
+              content: "";
               position: absolute;
               bottom: -4px;
               left: 0;

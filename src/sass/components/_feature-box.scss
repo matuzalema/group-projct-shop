@@ -19,7 +19,7 @@
     }
 
     &::before {
-      content: '';
+      content: "";
       border: 1px solid #b6b6b6;
       position: absolute;
       top: 50%;
@@ -35,7 +35,7 @@
 
   .content {
     text-transform: uppercase;
-    color: rgb(42,42,42);
+    color: rgb(42, 42, 42);
     margin-top: -0.5rem;
     letter-spacing: 1px;
 
