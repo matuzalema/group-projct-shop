@@ -79,4 +79,16 @@
     justify-content: space-between;
     align-items: center;
   }
+
+  &:hover {
+    .buttons {
+      visibility: visible;
+    }
+
+    .price {
+      .no-hover {
+        background-color: $primary;
+      }
+    }
+  }
 }
