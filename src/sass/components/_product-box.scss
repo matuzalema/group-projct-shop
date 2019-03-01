@@ -81,6 +81,24 @@
     align-items: center;
   }
 
+  .price {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .old-price {
+    text-decoration: line-through;
+    text-decoration-color: $primary;
+    text-decoration-style: solid;
+    margin: 0 5px;
+    color: gray;
+    font-weight: 600;
+    font-size: 16px;
+    -moz-text-decoration-style: solid;
+    -moz-text-decoration-color: $primary;
+  }
+
   &:hover {
     .buttons {
       visibility: visible;
