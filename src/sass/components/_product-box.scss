@@ -27,6 +27,7 @@
     }
 
     .buttons {
+      visibility: hidden;
       display: flex;
       justify-content: space-between;
     }
@@ -83,6 +84,18 @@
   .outlines {
     .active {
       color: $primary;
+    }
+  }
+  
+  &:hover {
+    .buttons {
+      visibility: visible;
+    }
+
+    .price {
+      .btn-main-small {
+        background-color: $primary;
+      }
     }
   }
 }
