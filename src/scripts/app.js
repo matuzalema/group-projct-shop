@@ -6,11 +6,7 @@
 
   btnFavorite.forEach(element => {
     element.addEventListener('click', function (event) {
-      if (this.classList.contains('active')) {
-        this.classList.remove('active');
-      } else {
-        this.className += ' active';
-      }
+      this.classList.toggle('active');
       event.preventDefault();
     });
   });
