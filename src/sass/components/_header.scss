@@ -223,3 +223,50 @@ header {
     }
   }
 }
+
+@media (max-width: 767px) {
+  header {
+    .top-bar {
+      .text-left {
+        flex-grow: 2;
+
+        ul {
+          li {
+            margin-right: 0.5rem;
+          }
+        }
+      }
+
+      .text-right {
+        ul {
+          li {
+            margin-left: 0.5rem;
+          }
+        }
+      }
+    }
+
+    .company-claim {
+      .container {
+        .row {
+          height: auto;
+          padding: 2px 0;
+          position: relative;
+
+          .phone-number {
+            position: absolute;
+            top: 40px;
+
+            p {
+              font-size: 14px;
+
+              i {
+                margin-right: 0;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
