@@ -93,6 +93,13 @@
     color: #a5a5a5;
     font-size: 16px;
   }
+  
+  .outlines {
+    .active {
+      color: $primary;
+      border: 1px solid $primary;
+    }
+  }
 
   &:hover {
     .buttons {
