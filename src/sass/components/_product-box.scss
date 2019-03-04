@@ -81,6 +81,13 @@
     align-items: center;
   }
 
+  .outlines {
+    .active {
+      color: $primary;
+      border: 1px solid $primary;
+    }
+  }
+
   &:hover {
     .buttons {
       visibility: visible;
