@@ -185,7 +185,7 @@ header {
           z-index: 0;
         }
 
-        select {
+        .select {
           -webkit-appearance: none;
           border: 0;
           background-color: transparent;
@@ -194,6 +194,29 @@ header {
           font-size: 14px;
           position: relative;
           z-index: 1;
+          ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            &:hover li ul {
+              display: block;
+              color: red;
+            }
+            li {
+              padding-top: 5px;
+              width: 180px;
+              text-align: center;
+              ul {
+                position: absolute;
+                background-color: #fff;
+                display: none;
+                li a {
+                  text-decoration: none;
+                  line-height: 26px;
+                }
+              }
+            }
+          }
         }
       }
 
