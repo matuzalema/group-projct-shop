@@ -183,6 +183,11 @@ header {
           position: absolute;
           right: 10px;
           z-index: 0;
+          top: 15px;
+          transition: 0.4s;
+        }
+        &:hover i:last-child {
+          top: 20px;
         }
 
         select {
@@ -190,34 +195,38 @@ header {
           border: 0;
           background-color: transparent;
           outline: none;
-          padding: 5px 30px 5px 35px;
+          padding: 10px 30px 5px 35px;
           font-size: 14px;
           position: relative;
           z-index: 1;
+          &:hover i {
+            cursor: pointer;
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+
+    .search-field {
+      display: flex;
+      align-items: center;
+      position: relative;
+
+      input {
+        border: 0;
+        padding-left: 10px;
+        font-size: 14px;
+        outline: none;
+
+        &::placeholder {
+          color: $text-color;
         }
       }
 
-      .search-field {
-        display: flex;
-        align-items: center;
-        position: relative;
-
-        input {
-          border: 0;
-          padding-left: 10px;
-          font-size: 14px;
-          outline: none;
-
-          &::placeholder {
-            color: $text-color;
-          }
-        }
-
-        button {
-          border: 0;
-          background-color: transparent;
-          outline: none;
-        }
+      button {
+        border: 0;
+        background-color: transparent;
+        outline: none;
       }
     }
   }
