@@ -79,15 +79,36 @@ footer {
   }
 }
 
-@media (max-width: 960px) {
+@media (max-width: 1200px) {
   footer .bottom-bar .row {
     display: block;
+    .socialmedia ul {
+      line-height: 50px;
+      text-align: center;
+    }
+  }
+}
+
+@media (max-width: 992px) and (orientation: landscape) {
+  footer .col {
+    flex-basis: 50%;
+    text-align: center;
+  }
+  .bottom-bar .row {
+    display: block;
     .copyright {
-      margin-top: 15px;
+      padding-top: 10px;
     }
     .socialmedia ul {
+      line-height: 50px;
       text-align: center;
-      margin-top: 15px;
     }
+  }
+}
+
+@media (max-width: 480px) and (orientation: landscape) {
+  footer .col {
+    flex-basis: 100%;
+    text-align: center;
   }
 }
