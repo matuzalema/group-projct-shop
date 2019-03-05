@@ -78,3 +78,16 @@ footer {
     }
   }
 }
+
+@media (max-width: 960px) {
+  footer .bottom-bar .row {
+    display: block;
+    .copyright {
+      margin-top: 15px;
+    }
+    .socialmedia ul {
+      text-align: center;
+      margin-top: 15px;
+    }
+  }
+}
