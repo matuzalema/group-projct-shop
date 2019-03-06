@@ -228,11 +228,9 @@ header {
   header {
     .top-bar {
       .text-left {
-        flex-grow: 2;
-
         ul {
           li {
-            margin-right: 0.5rem;
+            margin-right: 0.3rem;
           }
         }
       }
@@ -250,12 +248,17 @@ header {
       .container {
         .row {
           height: auto;
-          padding: 2px 0;
+          padding: 20px 0 30px;
           position: relative;
+
+          img {
+            width: 140px;
+            height: auto;
+          }
 
           .phone-number {
             position: absolute;
-            top: 40px;
+            top: 70px;
 
             p {
               font-size: 14px;
