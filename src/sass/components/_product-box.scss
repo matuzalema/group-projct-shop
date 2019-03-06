@@ -81,6 +81,19 @@
     align-items: center;
   }
 
+  .price {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .old-price {
+    text-decoration: line-through;
+    margin: 0 5px;
+    color: #a5a5a5;
+    font-size: 16px;
+  }
+  
   .outlines {
     .active {
       color: $primary;
