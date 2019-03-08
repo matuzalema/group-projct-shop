@@ -16,7 +16,7 @@
     let pages;
     let carouselDots = document.querySelector('.carousel-dots');
     let sliderItems = document.querySelectorAll('.slider-item');
-    let vPortWidth = window.innerWidth || document.documentElement.clientWidth;
+    let vPortWidth = document.body.clientWidth;
     // Reset number
     carouselDots.innerHTML = '';
     // Numbers of dots RWD
