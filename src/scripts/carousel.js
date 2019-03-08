@@ -1,5 +1,8 @@
+<<<<<<< HEAD
 import { tns } from '../../node_modules/tiny-slider/src/tiny-slider';
 
+=======
+>>>>>>> Add carousel -tiny-slider to new furniture
 let slider = tns({
   container: '.my-slider',
   navContainer: '.carousel-dots',
@@ -7,7 +10,11 @@ let slider = tns({
   controls: false,
   nav: true,
   responsive: {
+<<<<<<< HEAD
     576: {
+=======
+    572: {
+>>>>>>> Add carousel -tiny-slider to new furniture
       items: 2,
       gutter: 5
     },
@@ -22,6 +29,10 @@ let slider = tns({
 });
 
 // Slider rebuild when window resize
+<<<<<<< HEAD
 window.addEventListener('resize', function () {
+=======
+window.addEventListener('resize', function() {
+>>>>>>> Add carousel -tiny-slider to new furniture
   slider.rebuild();
 });
