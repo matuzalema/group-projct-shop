@@ -5,14 +5,14 @@
   const btnFavorite = document.querySelectorAll('.btn-outline');
 
   btnFavorite.forEach(element => {
-    element.addEventListener('click', function(event) {
+    element.addEventListener('click', function (event) {
       this.classList.toggle('active');
       event.preventDefault();
     });
   });
 
   // Add dots to menu as carousel nav
-  function ChangeDotsNumber() {
+  function ChangeDotsNumber () {
     let pages;
     let carouselDots = document.querySelector('.carousel-dots');
     let sliderItems = document.querySelectorAll('.slider-item');
@@ -34,7 +34,7 @@
   }
   ChangeDotsNumber();
   // Change number when resized
-  window.addEventListener('resize', function() {
+  window.addEventListener('resize', function () {
     ChangeDotsNumber();
   });
 })();
