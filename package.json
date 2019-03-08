@@ -5,9 +5,9 @@
   "main": "index.js",
   "scripts": {
     "prewatch": "npm run clean",
-    "watch": "parcel src/index.html --open --no-autoinstall --port 8080",
+    "watch": "parcel src/index.html --no-cache --open --no-autoinstall --port 8080",
     "prebuild": "npm run clean",
-    "build": "parcel build src/index.html",
+    "build": "parcel build --no-cache src/index.html",
     "clean": "rimraf dist",
     "code-quality": "npm run format && npm run lint",
     "format": "prettier --write \"src/**/*.{js,html,scss}\"",
@@ -15,7 +15,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "pretty-quick --staged && lint-staged"
+      "pre-commit": "pretty-quick --staged"
     }
   },
   "lint-staged": {
@@ -44,6 +44,7 @@
   },
   "dependencies": {
     "jquery": "^3.3.1",
-    "popper.js": "^1.14.6"
+    "popper.js": "^1.14.6",
+    "tiny-slider": "^2.9.1"
   }
 }
