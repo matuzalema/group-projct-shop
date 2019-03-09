@@ -120,16 +120,6 @@ header {
       justify-content: center;
     }
 
-    // .wrapper-search {
-    //   display: flex;
-    //   justify-content: flex-start;
-    //   align-items: center;
-
-    //   .menu-list-display {
-    //   display: none;
-    //   }
-    // }
-
     .menu {
       display: flex;
       align-self: stretch;
@@ -187,7 +177,7 @@ header {
         color: $text-color;
 
         .category {
-          padding: 0 30px 0 40px;
+          padding: 0 30px 0 35px;
           border-right: 1px solid $form-border-color;
           display: flex;
           align-items: center;
@@ -216,6 +206,10 @@ header {
             position: relative;
             z-index: 1;
           }
+
+          p {
+            margin: 0;
+          }
         }
 
         .search-field {
@@ -224,6 +218,7 @@ header {
           position: relative;
 
           input {
+            width: 100%;
             border: 0;
             padding-left: 10px;
             font-size: 14px;
@@ -245,7 +240,7 @@ header {
   }
 }
 
-@media /*(min-width: 768px) and */ (max-width: 1199px) {
+@media (max-width: 1200px) {
   header .menu-bar {
     .menu {
       width: 100%;
@@ -273,24 +268,19 @@ header {
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 575px) {
   header .menu-bar {
     .menu {
       transform: scaleY(0);
       opacity: 0;
       position: relative;
-      z-index: 100;
-
-      .dropdown {
-        transform: scaleY(1);
-        transform-origin: top;
-        opacity: 1;
-        border: 5px solid green;
-      }
+      z-index: 102;
 
       ul {
         flex-direction: column;
+        justify-content: center;
         position: absolute;
+        top: 6px;
         background: #ffffff;
         z-index: 101;
 
@@ -300,18 +290,24 @@ header {
       }
     }
 
+    .dropdown {
+      min-height: 1px;
+      transform: scaleY(1);
+      transform-origin: top;
+      opacity: 1;
+    }
+
     .wrapper-search {
       padding: 15px 0;
       justify-content: space-evenly;
-      border: 5px solid red;
 
       .search-form {
         margin-left: 10px;
       }
 
       .menu-list-display {
-        display: block;
-        padding: 0 20px;
+        display: flex;
+        padding: 0 10px;
         justify-content: center;
         color: $primary;
         font-size: 30px;
