@@ -1,4 +1,5 @@
 .product-box {
+  display: block;
   background-color: #ffffff;
   border: 1px solid #e1e1e1;
   margin-bottom: 2rem;
@@ -26,10 +27,9 @@
       padding: 30px 15px 5px 15px;
     }
 
-    .buttons {
+    .show {
       visibility: hidden;
-      display: flex;
-      justify-content: space-between;
+      border: none;
     }
   }
 
@@ -38,21 +38,23 @@
     padding: 20px;
 
     h5 {
-      color: $primary;
+      color: $text-color;
       font-size: 16px;
       line-height: 24px;
       letter-spacing: 1px;
     }
 
     .stars {
-      a {
+      button {
         text-decoration: none;
         color: rgb(42, 42, 42);
         @extend .far;
         @extend .fa-star;
+        display: none;
 
         &.full {
           @extend .fas;
+          display: none;
         }
       }
     }
@@ -82,8 +84,13 @@
   }
 
   &:hover {
-    .buttons {
+    .show {
       visibility: visible;
+      background-color: $primary;
+      cursor: pointer;
+    }
+    &:hover h5 {
+      color: $primary;
     }
 
     .price {
@@ -91,5 +98,19 @@
         background-color: $primary;
       }
     }
+  }
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.tabs {
+  display: none;
+  opacity: 0;
+  transition: all 1s;
+
+  &.active {
+    display: flex;
+    opacity: 1;
   }
 }
