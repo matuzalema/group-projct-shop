@@ -5,7 +5,7 @@ let slider = tns({
   controls: false,
   nav: true,
   responsive: {
-    572: {
+    576: {
       items: 2,
       gutter: 5
     },
