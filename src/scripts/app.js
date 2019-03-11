@@ -15,13 +15,11 @@ function tabsy () {
     links[i].addEventListener('click', function (e) {
       e.preventDefault();
 
-      for (let sibling of this.parentElement.parentElement.children) {
-        if (sibling !== this && sibling.childNodes[0].nodeType === 1) {
-          //           console.log(sibling.childNodes[0].nodeType);
-          sibling.childNodes[0].classList.remove('active');
-        }
-      }
-      this.classList.add('active');
+      links.forEach(function (node) {
+        node.classList.remove('active');
+      });
+      e.currentTarget.classList.add('active');
+      //
       data = this.dataset.anchor;
       var numbered = this.dataset.number;
       //       console.log(this.dataset.number);
@@ -54,13 +52,12 @@ function tabsy () {
     elements[i].addEventListener('click', function (e) {
       e.preventDefault();
 
-      for (let sibling of this.parentElement.parentElement.children) {
-        if (sibling !== this) {
-          sibling.childNodes[0].classList.remove('active');
-        }
-      }
-      this.classList.add('active');
+      elements.forEach(function (node) {
+        node.classList.remove('active');
+      });
+      e.currentTarget.classList.add('active');
       data = this.dataset.anchor;
+
       var numbered = this.dataset.number;
       //       console.log(this.dataset.number);
 
