@@ -304,6 +304,21 @@ header {
 
       .search-form {
         margin-left: 10px;
+
+        .category i {
+          position: absolute;
+          top: 13px;
+        }
+
+        .search-field {
+          padding-right: 30px;
+
+          button .fa-search {
+            position: absolute;
+            top: 14px;
+            right: 5px;
+          }
+        }
       }
 
       .menu-list-display {
