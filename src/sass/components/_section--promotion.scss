@@ -1,6 +1,17 @@
 .section--promotion {
   padding-top: 10px;
+  .col {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
   .product-box {
+    position: relative;
+    min-width: 300px;
+    align-self: center;
+    margin: 0;
+
     .hot-deals {
       display: flex;
       justify-content: space-between;
@@ -10,12 +21,15 @@
       color: #fff;
       padding-left: 10px;
       padding-right: 10px;
+
       h5 {
         line-height: 30px;
       }
+
       .dots-deals {
         display: flex;
         align-items: center;
+
         .dot {
           background-color: #fff;
           height: 15px;
@@ -25,37 +39,141 @@
           display: inline-block;
           border-radius: 50%;
           margin: 3px;
+
           &:hover {
             cursor: pointer;
             background-color: $primary;
           }
         }
+
         .dot-active {
           background-color: $primary;
         }
       }
     }
+
     .photo {
       padding: 0;
       text-align: center;
       background-color: #fff;
+      max-height: 350px;
+      position: relative;
+
+      &:hover .btn-main-small {
+        display: block;
+        transition: 0.5s;
+      }
+
       .btn-main-small {
-        position: relative;
-        top: -200px;
+        position: absolute;
+        top: 50%;
+        left: 33%;
+        display: none;
       }
     }
+
     .stopwatch {
       display: flex;
       justify-content: space-around;
+      position: absolute;
+      bottom: 150px;
+      left: 0;
+      right: 0;
+      padding: 0 15px;
+
       .data {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
         text-transform: uppercase;
-        width: 60px;
-        height: 60px;
+        width: 67px;
+        height: 67px;
+        line-height: 25px;
         border-radius: 50%;
-        background-color: #2a2a2a;
+        background-color: rgba(42, 42, 42, 0.9);
         color: #fff;
         text-align: center;
+        font-weight: 500;
+        font-size: 14px;
+
+        :first-child {
+          font-size: 20px;
+          font-weight: 600;
+        }
       }
     }
+  }
+
+  .promotion {
+    text-align: center;
+    position: relative;
+    border: 1px solid #e1e1e1;
+    color: #fff;
+    overflow: hidden;
+
+    .wrapper {
+      background-color: rgba(42, 42, 42, 0.6);
+      position: absolute;
+      text-transform: uppercase;
+      top: 20%;
+      left: 0;
+      right: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 10% 0;
+
+      h1 {
+        font-weight: 300;
+
+        span {
+          font-weight: bold;
+        }
+      }
+
+      h2 {
+        font-size: 1.3em;
+        font-weight: 300;
+      }
+
+      button {
+        color: $text-color;
+        text-transform: uppercase;
+        background-color: #fff;
+        border: none;
+        align-self: center;
+        max-width: 150px;
+        padding: 10px;
+        border-radius: 5px;
+        font-weight: 500;
+        position: absolute;
+        top: 90%;
+        &:focus {
+          outline: none;
+        }
+      }
+    }
+
+    .promotion-btns {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      background-color: $promotion-bg;
+
+      .arrow-promtion {
+        width: 50%;
+        padding: 5px;
+        cursor: pointer;
+        &:hover {
+          background-color: $primary;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .section--promotion .product-box {
+    margin-bottom: 20px;
   }
 }
