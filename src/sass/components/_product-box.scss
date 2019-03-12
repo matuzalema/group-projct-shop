@@ -5,9 +5,11 @@
 
   .photo {
     position: relative;
-    padding: 80% 10px 0 10px;
+    text-align: center;
+    height: 285px;
+    padding-top: 25px;
     background: {
-      color: #f4f5f7;
+      color: #ffffff;
       size: contain;
       position: center;
       repeat: no-repeat;
@@ -22,7 +24,7 @@
       transform: translateX(-50%);
       background-color: #292929;
       border-radius: 50%;
-      color: #ffffff;
+      color: #fff;
       padding: 30px 15px 5px 15px;
     }
 
