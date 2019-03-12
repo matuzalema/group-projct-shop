@@ -9,11 +9,15 @@ header {
 
       li {
         display: inline-block;
-        line-height: 55px;
+        line-height: 54px;
 
         a {
           color: #ffffff;
           font-size: 13px;
+
+          p {
+            margin: 0;
+          }
 
           &:hover {
             color: $primary;
