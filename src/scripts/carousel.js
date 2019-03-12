@@ -1,3 +1,5 @@
+import { tns } from '../../node_modules/tiny-slider/src/tiny-slider';
+
 let slider = tns({
   container: '.my-slider',
   navContainer: '.carousel-dots',
@@ -20,6 +22,6 @@ let slider = tns({
 });
 
 // Slider rebuild when window resize
-window.addEventListener('resize', function() {
+window.addEventListener('resize', function () {
   slider.rebuild();
 });
