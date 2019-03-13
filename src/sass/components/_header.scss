@@ -87,14 +87,15 @@ header {
         }
 
         .cart-counter {
-          width: 28px;
-          height: 27px;
+          min-width: 28px;
+          min-height: 27px;
           border-radius: 14px;
           background-color: $header-bg;
           display: flex;
           align-items: center;
           justify-content: center;
-          font-size: 14px;
+          font-size: 12px;
+          padding: 2px;
           color: rgb(224, 227, 237);
           position: absolute;
           top: 50%;
@@ -116,7 +117,8 @@ header {
     background-color: #ffffff;
 
     .container > .row {
-      height: 84px;
+      min-height: 84px;
+      justify-content: center;
     }
 
     .menu {
@@ -160,63 +162,174 @@ header {
       }
     }
 
-    .search-form {
-      border: 1px solid $form-border-color;
-      display: inline-flex;
-      height: 45px;
-      color: $text-color;
+    .wrapper-search {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
 
-      .category {
-        border-right: 1px solid $form-border-color;
-        display: flex;
-        align-items: center;
-        position: relative;
-
-        i:first-child {
-          color: $primary;
-          position: absolute;
-          left: 10px;
-          z-index: 0;
-        }
-
-        i:last-child {
-          position: absolute;
-          right: 10px;
-          z-index: 0;
-        }
-
-        select {
-          -webkit-appearance: none;
-          border: 0;
-          background-color: transparent;
-          outline: none;
-          padding: 5px 30px 5px 35px;
-          font-size: 14px;
-          position: relative;
-          z-index: 1;
-        }
+      .menu-list-display {
+        display: none;
       }
 
-      .search-field {
-        display: flex;
-        align-items: center;
-        position: relative;
+      .search-form {
+        border: 1px solid $form-border-color;
+        display: inline-flex;
+        height: 45px;
+        color: $text-color;
 
-        input {
-          border: 0;
-          padding-left: 10px;
-          font-size: 14px;
-          outline: none;
+        .category {
+          padding: 0 30px 0 35px;
+          border-right: 1px solid $form-border-color;
+          display: flex;
+          align-items: center;
+          position: relative;
 
-          &::placeholder {
-            color: $text-color;
+          i:first-child {
+            color: $primary;
+            position: absolute;
+            left: 10px;
+            z-index: 0;
+          }
+
+          i:last-child {
+            position: absolute;
+            right: 10px;
+            z-index: 0;
+          }
+
+          select {
+            -webkit-appearance: none;
+            border: 0;
+            background-color: transparent;
+            outline: none;
+            padding: 5px 30px 5px 35px;
+            font-size: 14px;
+            position: relative;
+            z-index: 1;
+          }
+
+          p {
+            margin: 0;
           }
         }
 
-        button {
-          border: 0;
-          background-color: transparent;
-          outline: none;
+        .search-field {
+          display: flex;
+          align-items: center;
+          position: relative;
+
+          input {
+            width: 100%;
+            border: 0;
+            padding-left: 10px;
+            font-size: 14px;
+            outline: none;
+
+            &::placeholder {
+              color: $text-color;
+            }
+          }
+
+          button {
+            border: 0;
+            background-color: transparent;
+            outline: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  header .menu-bar {
+    .menu {
+      width: 100%;
+      padding: 0;
+
+      ul {
+        width: 100%;
+
+        li {
+          height: 50px;
+          flex: 1;
+
+          a {
+            width: 100%;
+            justify-content: center;
+          }
+        }
+      }
+    }
+
+    .wrapper-search {
+      padding: 15px 0;
+      justify-content: center;
+    }
+  }
+}
+
+@media (max-width: 575px) {
+  header .menu-bar {
+    .menu {
+      transform: scaleY(0);
+      opacity: 0;
+      position: relative;
+      z-index: 102;
+
+      ul {
+        flex-direction: column;
+        justify-content: center;
+        position: absolute;
+        top: 6px;
+        background: #ffffff;
+        z-index: 101;
+
+        li {
+          border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+        }
+      }
+    }
+
+    .dropdown {
+      min-height: 1px;
+      transform: scaleY(1);
+      transform-origin: top;
+      opacity: 1;
+    }
+
+    .wrapper-search {
+      padding: 15px 0;
+      justify-content: space-evenly;
+
+      .search-form {
+        margin-left: 10px;
+
+        .category i {
+          position: absolute;
+          top: 13px;
+        }
+
+        .search-field {
+          padding-right: 30px;
+
+          button .fa-search {
+            position: absolute;
+            top: 14px;
+            right: 5px;
+          }
+        }
+      }
+
+      .menu-list-display {
+        display: flex;
+        padding: 0 10px;
+        justify-content: center;
+        color: $primary;
+        font-size: 30px;
+
+        &.active {
+          color: #333333;
         }
       }
     }
