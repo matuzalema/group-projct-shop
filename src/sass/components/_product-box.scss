@@ -1,3 +1,10 @@
+.my-slider {
+  min-height: 400px;
+  margin: 0 auto;
+  width: 100%;
+  overflow: hidden;
+}
+
 .product-box {
   background-color: #ffffff;
   border: 1px solid #e1e1e1;
@@ -7,13 +14,15 @@
     position: relative;
     text-align: center;
     height: 285px;
-    padding-top: 25px;
+    padding: 25px 10px 0 10px;
+
     background: {
       color: #ffffff;
       size: contain;
       position: center;
       repeat: no-repeat;
     }
+
     overflow: hidden;
     align-items: flex-end;
 
