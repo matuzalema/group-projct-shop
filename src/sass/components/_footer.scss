@@ -85,8 +85,15 @@ footer {
   }
 }
 
-@media (max-width: 960px) and (orientation: landscape) {
-  footer .menu-wrapper {
-    text-align: center;
+@media (max-width: 960px) {
+  footer {
+    .menu-wrapper {
+      text-align: center;
+      display: block;
+    }
+    img {
+      text-align: center;
+      width: 100%;
+    }
   }
 }
