@@ -78,3 +78,22 @@ footer {
     }
   }
 }
+
+@media (max-width: 1200px) {
+  footer .socialmedia ul {
+    text-align: center;
+  }
+}
+
+@media (max-width: 960px) {
+  footer {
+    .menu-wrapper {
+      text-align: center;
+      display: block;
+    }
+    img {
+      text-align: center;
+      width: 100%;
+    }
+  }
+}
