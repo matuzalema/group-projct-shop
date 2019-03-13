@@ -10,16 +10,22 @@
 
   <body>
     <module href="./src/partials/10_header.html"></module>
+    <module href="./src/partials/20_section_promotion.html"></module>
 
-    <module href="./src/partials/30_section-features.html"></module>
-    <module href="./src/partials/40_section-deals.html"></module>
-    <module href="./src/partials/50_section-products.html"></module>
+    <include src="10_header.html"></include>
 
-    <module href="./src/partials/70_section-blog-posts.html"></module>
+    <include src="20_section_promotion.html"></include>
 
-    <module href="./src/partials/90_footer.html"></module>
+    <include src="30_section-features.html"></include>
+
+    <include src="50_section-products.html"></include>
+
+    <include src="70_section-blog-posts.html"></include>
+
+    <include src="90_footer.html"></include>
 
     <script src="./scripts/bootstrap.min.js"></script>
     <script src="./scripts/app.js"></script>
+    <script src="./scripts/carousel.js"></script>
   </body>
 </html>
