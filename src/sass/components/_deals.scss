@@ -1,0 +1,120 @@
+.section--deals {
+  padding-bottom: 3.5rem;
+
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    text-transform: uppercase;
+
+    .deals-thumbnail-big {
+      height: 450px;
+      background-image: url("../images/deals/sofa.jpg");
+      position: relative;
+
+      .thumbnail-big-overlay {
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        color: #ffffff;
+        background-color: rgba($color: #000000, $alpha: 0.4);
+        position: absolute;
+        top: 20px;
+        bottom: 20px;
+        left: 20px;
+        right: 20px;
+
+        .thumbnail-big-header:first-child {
+          margin-bottom: 0;
+          font-weight: 600;
+
+          .thumbnail-big-header-span {
+            font-size: 3.2rem;
+          }
+        }
+
+        .thumbnail-big-header:last-child {
+          margin-top: 10px;
+          padding: 5px 15px;
+          align-self: flex-start;
+          font-size: 2.5rem;
+          font-weight: 600;
+          border: 4px solid #ffffff;
+        }
+      }
+    }
+
+    .deals-thumbnail-small {
+      padding-right: 0;
+      display: flex;
+      flex-direction: column;
+
+      .deals-thumbnail-top,
+      .deals-thumbnail-bottom {
+        height: 220px;
+        display: flex;
+        align-items: center;
+      }
+
+      .deals-thumbnail-top {
+        margin-bottom: 3px;
+        background-image: url("../images/deals/chair.jpg");
+        background-size: cover;
+        justify-content: center;
+
+        .thumbnail-top-description {
+          .thumbnail-top-header-2 {
+            margin-bottom: 0;
+            font-weight: 700;
+
+            .thumbnail-top-header-2-span {
+              font-weight: 300;
+            }
+          }
+
+          .thumbnail-top-header-5 {
+            margin-bottom: 5px;
+            font-size: 1.2rem;
+            font-weight: 600;
+            letter-spacing: 3px;
+          }
+
+          .thumbnail-top-header-3 {
+            margin-bottom: 0;
+            font-size: 2rem;
+            font-weight: 600;
+            color: $primary;
+          }
+        }
+      }
+
+      .deals-thumbnail-bottom {
+        margin-top: 7px;
+        padding-right: 2px;
+        justify-content: flex-end;
+        background-image: url("../images/deals/bed.jpg");
+        background-size: cover;
+
+        .thumbnail-bottom-description {
+          .thumbnail-bottom-h3:first-child {
+            margin-bottom: 2px;
+            display: flex;
+            justify-content: flex-end;
+            font-weight: 700;
+            color: $primary;
+
+            .thumbnail-bottom-h3-span {
+              font-weight: 300;
+            }
+          }
+
+          .thumbnail-bottom-h3:last-child {
+            display: flex;
+            justify-content: flex-end;
+            font-size: 1.2rem;
+          }
+        }
+      }
+    }
+  }
+}
