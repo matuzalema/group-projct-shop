@@ -1,4 +1,4 @@
-(function() {
+(function () {
   'use strict';
 
   // Change active button favorite & add to compare on click
@@ -37,10 +37,8 @@
   window.addEventListener('resize', function () {
     ChangeDotsNumber();
   });
-})();
 
-// MENU-BAR dropdown for small devices
-(function () {
+  // MENU-BAR dropdown for small devices
   var showMenuBtn = document.querySelector('.menu-list-display');
   var menuList = document.getElementById('dropdown-menu');
 
