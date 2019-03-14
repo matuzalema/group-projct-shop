@@ -1,0 +1,32 @@
+.section--feedback {
+  .client-wrapper {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    color: $text-color-light;
+    font-size: 14px;
+    margin: 30px 0;
+
+    i {
+      color: #000;
+    }
+
+    blockquote {
+      margin: 30px 0;
+      width: 80%;
+      text-align: center;
+    }
+    .client-data {
+      display: flex;
+      img {
+        margin-right: 10px;
+      }
+      .name-data {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+      }
+    }
+  }
+}
