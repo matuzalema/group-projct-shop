@@ -18,6 +18,9 @@
       color: #fff;
       margin: 20px 0;
       cursor: pointer;
+      &:hover {
+        color: $primary;
+      }
     }
 
     img {
