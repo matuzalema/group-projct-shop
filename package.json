@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "prewatch": "npm run clean",
+    "watch": "parcel --port 8080 --open --no-cache --no-autoinstall src/index.html",
     "watch": "parcel src/index.html --no-cache --open --no-autoinstall --port 8080",
     "prebuild": "npm run clean",
     "build": "parcel build --no-cache src/index.html",
