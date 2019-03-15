@@ -45,10 +45,10 @@
     }
 
     .stars {
-      display: flex;
-      flex-direction: row-reverse;
-      justify-content: center;
       a {
+        text-decoration: none;
+        color: $text-color;
+        cursor: pointer;
         text-decoration: none;
         @extend .far;
         @extend .fa-star;
@@ -56,10 +56,16 @@
         &.full {
           @extend .fas;
         }
+
+        &.active,
+        &.hoverEffect {
+          color: $primary;
+          font-weight: 900;
+        }
         &:hover {
-          @extend .fas;
           ~ a {
-            @extend .fas;
+            color: $primary;
+            font-weight: 400;
           }
         }
       }
