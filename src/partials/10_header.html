@@ -52,13 +52,22 @@
   <div class="menu-bar">
     <div class="container">
       <div class="row align-items-center">
-        <div class="col">
+        <div class="col wrapper-search">
           <form action="" class="search-form">
             <div class="category">
               <i class="fas fa-list-ul"></i>
-              <select name="" id="">
-                <option value="">Select a category</option>
-              </select>
+              <nav class="select">
+                <div>Select a category</div>
+                <ul class="select-list">
+                  <li><a href="#">Home</a></li>
+                  <li><a href="#">Furniture</a></li>
+                  <li><a href="#">Chair</a></li>
+                  <li><a href="#">Table</a></li>
+                  <li><a href="#">Sofa</a></li>
+                  <li><a href="#">Bedroom</a></li>
+                  <li><a href="#">Blog</a></li>
+                </ul>
+              </nav>
               <i class="fas fa-caret-down"></i>
             </div>
             <div class="search-field">
@@ -66,8 +75,9 @@
               <button><i class="fa fa-search"></i></button>
             </div>
           </form>
+          <span class="menu-list-display"><i class="fas fa-bars"></i></span>
         </div>
-        <div class="col-auto menu">
+        <div id="dropdown-menu" class="col-auto menu">
           <ul>
             <li><a href="#" class="active">Home</a></li>
             <li><a href="#">Furniture</a></li>
