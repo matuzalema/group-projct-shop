@@ -1,15 +1,20 @@
-%animation-background-color {
-  background-color: $primary;
-  transition: $transition-hover-timing;
+%animation {
+  transition: color $transition-text-timing;
+  transition: background-color $transition-background-timing;
 }
 
-%animation-button-hover {
-  color: $text-hover-color;
-  background-color: $primary;
-  transition: $transition-hover-timing;
-}
+// %animation-background-color {
+//   background-color: $primary;
+//   transition: $transition-hover-timing;
+// }
 
-%animation-text-hover {
-  color: $text-hover-color;
-  transition: $transition-hover-timing;
-}
+// %animation-button-hover {
+//   color: $text-hover-color;
+//   background-color: $primary;
+//   transition: $transition-hover-timing;
+// }
+
+// %animation-text-hover {
+//   color: $primary;
+//   transition: $transition-hover-timing;
+// }
