@@ -31,8 +31,11 @@ window.promoLeft = tns({
   swipeAngle: false,
   loop: true,
   autoplay: true,
-  autoplayTimeout: 3000,
-  autoplayButtonOutput: false
+  rewind: false,
+  speed: 1500,
+  autoplayTimeout: 4000,
+  autoplayButtonOutput: false,
+  autoplayHoverPause: true
 });
 
 window.promoRight = tns({
@@ -43,6 +46,8 @@ window.promoRight = tns({
   nav: false,
   slideBy: 'page',
   mouseDrag: true,
+  rewind: false,
+  speed: 1500,
   swipeAngle: false,
   loop: true,
   autoplay: false
