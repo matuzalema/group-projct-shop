@@ -1,3 +1,10 @@
+.my-slider {
+  min-height: 400px;
+  margin: 0 auto;
+  width: 100%;
+  overflow: hidden;
+}
+
 .product-box {
   background-color: #ffffff;
   border: 1px solid #e1e1e1;
@@ -5,13 +12,17 @@
 
   .photo {
     position: relative;
-    padding: 80% 10px 0 10px;
+    text-align: center;
+    height: 285px;
+    padding: 25px 10px 0 10px;
+
     background: {
-      color: #f4f5f7;
+      color: #ffffff;
       size: contain;
       position: center;
       repeat: no-repeat;
     }
+
     overflow: hidden;
     align-items: flex-end;
 
@@ -22,7 +33,7 @@
       transform: translateX(-50%);
       background-color: #292929;
       border-radius: 50%;
-      color: #ffffff;
+      color: #fff;
       padding: 30px 15px 5px 15px;
     }
 
@@ -80,6 +91,26 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+  }
+
+  .price {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .old-price {
+    text-decoration: line-through;
+    margin: 0 5px;
+    color: #a5a5a5;
+    font-size: 16px;
+  }
+
+  .outlines {
+    .active {
+      color: $primary;
+      border: 1px solid $primary;
+    }
   }
 
   &:hover {
