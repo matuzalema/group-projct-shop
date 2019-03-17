@@ -8,6 +8,7 @@
   padding: 10px 30px;
 
   &:not(.no-hover):hover {
+    @extend %animation;
     color: #ffffff !important;
     background-color: $primary;
     text-decoration: none;
@@ -23,7 +24,6 @@
 }
 
 .btn-outline {
-  @extend %animation;
   display: inline-block;
   padding: 5px 10px;
   border: 1px solid #2a2a2a;
@@ -32,6 +32,7 @@
   line-height: 22px;
 
   &:hover {
+    @extend %animation;
     background-color: #2a2a2a;
     color: #ffffff;
   }
