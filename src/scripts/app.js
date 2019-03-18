@@ -1,5 +1,3 @@
-console.log('hello');
-
 let starContainer = document.querySelectorAll('.stars');
 
 starContainer.forEach(function (item) {
