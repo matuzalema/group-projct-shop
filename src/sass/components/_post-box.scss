@@ -52,3 +52,14 @@
     }
   }
 }
+
+.tabs2 {
+  display: none;
+  opacity: 0;
+  transition: all 1s;
+
+  &.active {
+    display: flex;
+    opacity: 1;
+  }
+}
