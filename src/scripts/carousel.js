@@ -20,7 +20,7 @@ let slider = tns({
   loop: false
 });
 
-window.promoLeft = tns({
+let promoLeft = tns({
   container: '.slider-promo-left',
   navContainer: '.dots-deals',
   items: 1,
@@ -38,7 +38,7 @@ window.promoLeft = tns({
   autoplayHoverPause: true
 });
 
-window.promoRight = tns({
+let promoRight = tns({
   container: '.slider-promo-right',
   controlsContainer: '.promotion-btns',
   items: 1,
@@ -59,5 +59,7 @@ window.addEventListener('resize', event => {
   clearTimeout(resizeTimeout);
   resizeTimeout = setTimeout(() => {
     slider.rebuild();
+    promoLeft.rebuild();
+    promoRight.rebuild();
   }, 500);
 });
