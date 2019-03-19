@@ -34,3 +34,11 @@
     color: #ffffff;
   }
 }
+
+.btn-outline-view {
+  @extend .btn-outline;
+  &:hover {
+    background-color: $primary;
+    color: #ffffff;
+  }
+}

@@ -8,8 +8,7 @@ let slider = tns({
   nav: true,
   responsive: {
     576: {
-      items: 2,
-      gutter: 5
+      items: 2
     },
     992: {
       items: 3
@@ -21,7 +20,46 @@ let slider = tns({
   loop: false
 });
 
-// Slider rebuild when window resize
-window.addEventListener('resize', function () {
-  slider.rebuild();
+let promoLeft = tns({
+  container: '.slider-promo-left',
+  navContainer: '.dots-deals',
+  items: 1,
+  controls: false,
+  nav: true,
+  slideBy: 'page',
+  mouseDrag: true,
+  swipeAngle: false,
+  loop: true,
+  autoplay: true,
+  rewind: false,
+  speed: 1500,
+  autoplayTimeout: 4000,
+  autoplayButtonOutput: false,
+  autoplayHoverPause: true
+});
+
+let promoRight = tns({
+  container: '.slider-promo-right',
+  controlsContainer: '.promotion-btns',
+  items: 1,
+  controls: true,
+  nav: false,
+  slideBy: 'page',
+  mouseDrag: false,
+  touch: true,
+  rewind: false,
+  speed: 1500,
+  swipeAngle: false,
+  loop: true,
+  autoplay: false
+});
+
+let resizeTimeout;
+window.addEventListener('resize', event => {
+  clearTimeout(resizeTimeout);
+  resizeTimeout = setTimeout(() => {
+    slider.rebuild();
+    promoLeft.rebuild();
+    promoRight.rebuild();
+  }, 500);
 });
