@@ -182,9 +182,7 @@ header {
         color: $text-color;
 
         .category {
-          padding: 0 30px 0 35px;
           border-right: 1px solid $form-border-color;
-          display: flex;
           align-items: center;
           position: relative;
 
@@ -201,55 +199,42 @@ header {
             z-index: 0;
           }
 
-          select {
-            -webkit-appearance: none;
-            border: 0;
-            background-color: transparent;
-            outline: none;
-            padding: 5px 30px 5px 35px;
-            font-size: 14px;
-            position: relative;
-            z-index: 1;
-          }
-
           p {
             margin: 0;
           }
-        }
+          
+          &:hover {
+            background-color: $primary;
+            color: #fff;
+            transition: 0.5s;
+          }
+          
+          &:hover ul {
+            display: inline-block;
+          }
 
-        &:hover {
-          background-color: $primary;
-          color: #fff;
-          transition: 0.5s;
-        }
+          &:hover i:first-child {
+            color: #fff;
+            transition: 0.5s;
+          }
 
-        &:hover ul {
-          display: inline-block;
-        }
+          &:hover .select ul li {
+            display: inline-block;
+          }
 
-        &:hover i:first-child {
-          color: #fff;
-          transition: 0.5s;
+          &:hover .select ul {
+            border: 1px solid #292929;
+          }
         }
-
-        &:hover .select ul li {
-          display: inline-block;
-        }
-
-        &:hover .select ul {
-          border: 1px solid #292929;
-        }
-
         .select {
           -webkit-appearance: none;
           border: 0;
           background-color: transparent;
           outline: none;
-          padding: 5px 30px 5px 35px;
+          padding: 10px 30px 5px 35px;
           font-size: 14px;
           position: relative;
           z-index: 1;
-
           ul {
             list-style-type: none;
             margin: 0;
@@ -287,14 +272,13 @@ header {
               }
             }
           }
-          
+        }
         .search-field {
           display: flex;
           align-items: center;
           position: relative;
 
           input {
-            width: 100%;
             border: 0;
             padding-left: 10px;
             font-size: 14px;
@@ -386,8 +370,6 @@ header {
         }
 
         .search-field {
-          padding-right: 30px;
-
           button .fa-search {
             position: absolute;
             top: 14px;
