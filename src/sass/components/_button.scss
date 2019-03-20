@@ -17,7 +17,7 @@
   @extend .btn-main;
   font-size: 13px;
   line-height: 24px;
-  padding: 5px 10px;
+  padding: 1px 10px;
   font-weight: 400;
 }
 
@@ -31,6 +31,14 @@
 
   &:hover {
     background-color: #2a2a2a;
+    color: #ffffff;
+  }
+}
+
+.btn-outline-view {
+  @extend .btn-outline;
+  &:hover {
+    background-color: $primary;
     color: #ffffff;
   }
 }
