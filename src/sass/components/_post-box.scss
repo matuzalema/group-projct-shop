@@ -32,7 +32,7 @@
     padding: 25px;
 
     h5 {
-      color: $primary;
+      color: $text-color;
       font-size: 16px;
       line-height: 24px;
       letter-spacing: 1px;
@@ -48,6 +48,22 @@
     .more {
       text-align: center;
       padding-top: 30px;
+
+      .btn-main {
+        display: inline-block;
+      }
+    }
+  }
+  &:hover {
+    text-decoration: none;
+    cursor: pointer;
+    color: $text-color;
+
+    h5 {
+      color: $primary;
+    }
+    .btn-main {
+      background-color: $primary;
     }
   }
 }
