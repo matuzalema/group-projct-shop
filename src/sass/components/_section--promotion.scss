@@ -1,13 +1,21 @@
 .section--promotion {
   padding-top: 10px;
+
   .col {
     display: flex;
     justify-content: center;
     align-items: center;
   }
 
-  .product-box {
+  .slider-promo-left-item {
     position: relative;
+  }
+
+  .slider-promo-right-item {
+    position: relative;
+  }
+
+  .product-box {
     min-width: 300px;
     align-self: center;
     margin: 0;
@@ -46,7 +54,7 @@
           }
         }
 
-        .dot-active {
+        .tns-nav-active {
           background-color: $primary;
         }
       }
@@ -57,7 +65,6 @@
       text-align: center;
       background-color: #fff;
       max-height: 350px;
-      position: relative;
 
       &:hover .btn-main-small {
         display: block;
@@ -106,7 +113,6 @@
 
   .promotion {
     text-align: center;
-    position: relative;
     border: 1px solid #e1e1e1;
     color: #fff;
     overflow: hidden;
@@ -149,8 +155,13 @@
         position: absolute;
         top: 90%;
         cursor: pointer;
+
         &:focus {
           outline: none;
+        }
+
+        &:hover {
+          background-color: $primary;
         }
       }
     }
@@ -165,6 +176,7 @@
         width: 50%;
         padding: 5px;
         cursor: pointer;
+
         &:hover {
           background-color: $primary;
         }
