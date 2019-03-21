@@ -12,7 +12,7 @@ header {
         line-height: 55px;
 
         a {
-          color: #ffffff;
+          color: #fff;
           font-size: 13px;
 
           &:hover {
@@ -114,7 +114,7 @@ header {
 
   .menu-bar {
     box-shadow: 2px 3.464px 6px rgba(1, 2, 2, 0.2);
-    background-color: #ffffff;
+    background-color: #fff;
 
     .container > .row {
       min-height: 84px;
@@ -143,14 +143,14 @@ header {
             text-decoration: none;
             display: flex;
             align-items: center;
-            border-top: 4px solid #ffffff;
+            border-top: 4px solid #fff;
             font-weight: 500;
             letter-spacing: 1px;
 
             &:hover,
             &.active {
               background-color: $primary;
-              color: #ffffff;
+              color: #fff;
               border-color: $primary;
             }
 
@@ -213,27 +213,99 @@ header {
           }
         }
 
-        .search-field {
-          display: flex;
-          align-items: center;
+        &:hover {
+          background-color: $primary;
+          color: #fff;
+          transition: 0.5s;
+        }
+
+        &:hover ul {
+          display: inline-block;
+        }
+
+        &:hover i:first-child {
+          color: #fff;
+          transition: 0.5s;
+        }
+
+        &:hover .select ul li {
+          display: inline-block;
+        }
+
+        &:hover .select ul {
+          border: 1px solid #292929;
+        }
+
+        .select {
+          -webkit-appearance: none;
+          border: 0;
+          background-color: transparent;
+          outline: none;
+          padding: 5px 30px 5px 35px;
+          font-size: 14px;
           position: relative;
+          z-index: 1;
 
-          input {
-            width: 100%;
-            border: 0;
-            padding-left: 10px;
-            font-size: 14px;
-            outline: none;
+          ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            position: absolute;
+            top: 36px;
+            right: -1px;
+            width: 190px;
+            border-top: none;
 
-            &::placeholder {
-              color: $text-color;
+            li {
+              padding-top: 5px;
+              display: inline-block;
+              margin: 0;
+              padding: 0;
+              width: 100%;
+              background-color: #fff;
+              padding: 5px 30px 5px 35px;
+              line-height: 1.9;
+              display: none;
+
+              &:hover {
+                background-color: $primary;
+                transition: 0.5s;
+              }
+
+              &:hover a {
+                color: #fff;
+              }
+
+              a {
+                color: $form-border-color;
+                text-decoration: none;
+              }
             }
           }
 
-          button {
-            border: 0;
-            background-color: transparent;
-            outline: none;
+          .search-field {
+            display: flex;
+            align-items: center;
+            position: relative;
+
+            input {
+              width: 100%;
+              border: 0;
+              padding-left: 10px;
+              font-size: 14px;
+              outline: none;
+
+              &::placeholder {
+                color: $text-color;
+              }
+            }
+
+            button {
+              border: 0;
+              background-color: transparent;
+              outline: none;
+            }
           }
         }
       }
