@@ -2,7 +2,7 @@
   <div class="top-bar">
     <div class="container">
       <div class="row">
-        <div class="col text-left">
+        <div class="col text-left flex-fill col-auto">
           <ul>
             <li>
               <a href="#">USD <i class="fas fa-caret-down"></i></a>
@@ -15,13 +15,19 @@
             </li>
           </ul>
         </div>
-        <div class="col text-right">
+        <div class="col text-right flex-fill col-auto">
           <ul>
             <li>
-              <a href="#"><i class="fas fa-user"></i> Login</a>
+              <a href="#">
+                <i class="fas fa-user"></i>
+                <p class="d-md-inline-block d-none">Login</p>
+              </a>
             </li>
             <li>
-              <a href="#"><i class="fas fa-lock"></i> Register</a>
+              <a href="#"
+                ><i class="fas fa-lock"></i>
+                <p class="d-md-inline-block d-none">Register</p>
+              </a>
             </li>
             <li>
               <a href="#"><i class="fas fa-bars"></i></a>
@@ -33,17 +39,17 @@
   </div>
   <div class="company-claim">
     <div class="container">
-      <div class="row align-items-center">
-        <div class="col text-left phone-number">
+      <div class="row align-items-md-center align-items-start justify-content-around">
+        <div class="col text-md-left text-right order-md-1 order-3 phone-number">
           <p><i class="fas fa-mobile-alt"></i> 2345 - 3560 - 222</p>
         </div>
-        <div class="col text-center">
+        <div class="col text-center order-md-2 order-1">
           <a href="#"><img src="./images/logo.png"/></a>
         </div>
-        <div class="col text-right cart">
+        <div class="col text-sm-right text-center order-md-3 order-2 cart">
           <a href="#" class="cart-box">
             <div class="cart-icon"><i class="fas fa-shopping-basket"></i></div>
-            <div class="cart-counter">0</div>
+            <div class="cart-counter">99999</div>
           </a>
         </div>
       </div>
@@ -54,9 +60,20 @@
       <div class="row align-items-center">
         <div class="col wrapper-search">
           <form action="" class="search-form">
-            <div class="category">
+            <div class="category d-md-flex d-none">
               <i class="fas fa-list-ul"></i>
-              <div class=""><p>Select a category</p></div>
+              <nav class="select">
+                <div>Select a category</div>
+                <ul class="select-list">
+                  <li><a href="#">Home</a></li>
+                  <li><a href="#">Furniture</a></li>
+                  <li><a href="#">Chair</a></li>
+                  <li><a href="#">Table</a></li>
+                  <li><a href="#">Sofa</a></li>
+                  <li><a href="#">Bedroom</a></li>
+                  <li><a href="#">Blog</a></li>
+                </ul>
+              </nav>
               <i class="fas fa-caret-down"></i>
             </div>
             <div class="search-field">
