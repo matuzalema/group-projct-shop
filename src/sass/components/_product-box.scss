@@ -58,13 +58,27 @@
     .stars {
       a {
         text-decoration: none;
-        color: rgb(42, 42, 42);
+        color: $text-color;
+        cursor: pointer;
+        text-decoration: none;
         @extend .far;
         @extend .fa-star;
         display: inline;
 
         &.full {
           @extend .fas;
+        }
+
+        &.active,
+        &.hoverEffect {
+          color: $primary;
+          font-weight: 900;
+        }
+        &:hover {
+          ~ a {
+            color: $primary;
+            font-weight: 400;
+          }
         }
       }
     }
