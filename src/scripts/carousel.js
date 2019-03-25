@@ -69,6 +69,21 @@ tns({
   autoplayButtonOutput: false
 });
 
+
+// slider feedback
+
+tns({
+  container: '.my-slider2',
+  navContainer: '.carousel-dots2',
+  items: 1,
+  controls: false,
+  nav: true,
+  slideBy: 'page',
+  mouseDrag: true,
+  swipeAngle: false,
+  loop: true
+});
+
 // Slider section-products, add dots to menu as carousel nav
 function ChangeDotsNumber () {
   let pages;
@@ -115,3 +130,4 @@ function ChangeDotsNumber () {
     loop: true
   });
 }
+
