@@ -63,3 +63,17 @@ window.addEventListener('resize', event => {
     promoRight.rebuild();
   }, 500);
 });
+
+// slider feedback
+
+tns({
+  container: '.my-slider2',
+  navContainer: '.carousel-dots2',
+  items: 1,
+  controls: false,
+  nav: true,
+  slideBy: 'page',
+  mouseDrag: true,
+  swipeAngle: false,
+  loop: true
+});
