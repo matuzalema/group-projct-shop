@@ -8,6 +8,7 @@
     transform: translateY(-50%);
 
     i {
+      @extend %animation;
       width: 60px;
       height: 60px;
       border-radius: 100%;
@@ -51,6 +52,7 @@
   }
 
   &:hover {
+    @extend %animation;
     text-decoration: none;
 
     i {

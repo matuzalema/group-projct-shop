@@ -1,0 +1,9 @@
+:hover,
+:hover a {
+  @extend %animation;
+}
+
+%animation {
+  transition: color $transition-text-timing linear,
+    background-color $transition-background-timing linear;
+}
